@@ -1,0 +1,68 @@
+.listing-item-container {
+  // width: 100%;
+  display: flex;
+  border-bottom: 1px solid #2c2c2c;
+  padding: 10px;
+  align-items: center;
+}
+
+.list-item {
+  flex: 1;
+
+  &.half {
+    flex: 0.5;
+  }
+
+  &.cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .btns-container {
+      margin-right: 20px;
+      display: flex;
+
+      button {
+        aspect-ratio: 1/1;
+        border: none;
+        outline: none;
+        background: none;
+        margin: 0 8px;
+        padding: 0 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid transparent;
+
+        &:hover {
+          border-radius: 100%;
+        }
+      }
+      .btn-edit {
+        mat-icon {
+          color: green;
+        }
+
+        &:hover {
+          background: green;
+          mat-icon {
+            color: white;
+          }
+        }
+      }
+      .btn-delete {
+        mat-icon {
+          color: red;
+        }
+
+        &:hover {
+          background: red;
+          mat-icon {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

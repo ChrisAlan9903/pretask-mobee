@@ -1,0 +1,14 @@
+.listing-header-container {
+  display: flex;
+  border-bottom: 1px solid #2c2c2c;
+  padding: 32px 20px 16px 20px;
+}
+
+.header-item {
+  font-weight: 500;
+  flex: 1;
+
+  &.half {
+    flex: 0.5;
+  }
+}
