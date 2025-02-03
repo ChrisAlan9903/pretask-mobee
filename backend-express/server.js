@@ -1,7 +1,14 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const port = 8000;
+
+// Load environment variables. See .env file for available variables.
+// This should be done before loading variables from process.env
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+const port = process.env.PORT;
 
 // Define Routes
 const carRoute = require("./routes/cars.route");

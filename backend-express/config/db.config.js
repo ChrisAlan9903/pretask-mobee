@@ -1,10 +1,19 @@
-const Pool = require("pg").Pool;
+const fs = require("fs");
+const path = require("path");
+const { Pool } = require("pg");
+
+const caCertPath = path.resolve(__dirname, "../ca.pem");
+
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "mobee_cars", // Change this to your own database
-  password: "root", // Change this to your password
-  port: 5432,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
+  ssl: {
+    rejectUnauthorized: true,
+    ca: fs.readFileSync(caCertPath).toString(),
+  },
 });
 
 module.exports = pool;
