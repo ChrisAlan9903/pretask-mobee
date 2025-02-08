@@ -1,1 +1,4 @@
 <p>CAr detail page: {{ carId }}</p>
+@if (carId) {
+<qr-code [value]="carId" size="300" errorCorrectionLevel="M"></qr-code>
+}
