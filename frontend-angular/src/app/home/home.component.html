@@ -1,7 +1,20 @@
+@if (addForm) {
+<div>
+  <app-add-form
+    (closeAddForm)="toggleAddForm(false)"
+    (refreshListing)="refreshListing()"
+  ></app-add-form>
+</div>
+}
+
 <div class="page home">
   <!-- <div>
     <app-search></app-search>
   </div> -->
+
+  <div (click)="toggleAddForm(true)">
+    <button>Add New Car</button>
+  </div>
 
   <div class="listings">
     <app-listing-header></app-listing-header>

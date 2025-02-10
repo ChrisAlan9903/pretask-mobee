@@ -5,6 +5,7 @@ import { ListingItemComponent } from '../components/listing-item/listing-item.co
 import { SearchComponent } from '../components/search/search.component';
 import { CarsService } from '../services/cars.service';
 import { Car } from '../../interface/car';
+import { AddFormComponent } from '../components/add-form/add-form.component';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,7 @@ import { Car } from '../../interface/car';
     ListingHeaderComponent,
     ListingItemComponent,
     SearchComponent,
+    AddFormComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -20,8 +22,17 @@ import { Car } from '../../interface/car';
 export class HomeComponent implements OnInit {
   constructor(private carsService: CarsService) {}
   cars: Car[];
+  addForm: boolean = false;
 
   ngOnInit(): void {
+    this.getCars();
+  }
+
+  toggleAddForm(state: boolean) {
+    this.addForm = state;
+  }
+  refreshListing() {
+    this.addForm = false;
     this.getCars();
   }
 
