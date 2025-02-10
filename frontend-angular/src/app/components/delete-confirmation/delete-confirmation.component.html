@@ -1,0 +1,12 @@
+<div class="dialog-overlay">
+  <div class="dialog-box">
+    <div class="warning-text">
+      <h2>Confirm delete Car with id {{ carId }}?</h2>
+      <p>This action is not reversible.</p>
+    </div>
+    <div class="btn-wrapper">
+      <button (click)="onClose()" class="btn-success outline">Cancel</button>
+      <button (click)="onDelete()" class="btn-warning">Delete</button>
+    </div>
+  </div>
+</div>

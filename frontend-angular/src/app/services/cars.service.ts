@@ -19,10 +19,10 @@ export class CarsService {
   createOneCar(body: any) {
     return this.http.post(`${this.url}/cars`, body);
   }
-  updateOneCar(id: number, body: any) {
+  updateOneCar(id?: number, body?: any) {
     return this.http.put(`${this.url}/cars/${id}`, body);
   }
-  deleteOneCar(id: number) {
+  deleteOneCar(id?: number) {
     return this.http.delete(`${this.url}/cars/${id}`);
   }
 }

@@ -1,0 +1,68 @@
+<div class="dialog-overlay">
+  <div class="dialog-box">
+    <form (ngSubmit)="onSubmit()" class="form">
+      <h3>Car</h3>
+      <div class="input-item">
+        <label for="brand">Brand</label>
+        <input
+          type="text"
+          id="brand"
+          [(ngModel)]="formData.brand"
+          name="brand"
+        />
+      </div>
+
+      <div class="input-item">
+        <label for="model">Model</label>
+        <input
+          type="text"
+          id="model"
+          [(ngModel)]="formData.model"
+          name="model"
+        />
+      </div>
+
+      <div class="input-item">
+        <label for="variant">Variant</label>
+        <input
+          type="text"
+          id="variant"
+          [(ngModel)]="formData.variant"
+          name="variant"
+        />
+      </div>
+
+      <div class="input-item">
+        <label for="transmission">Status</label>
+        <select
+          id="transmission"
+          [(ngModel)]="formData.transmission"
+          name="transmission"
+        >
+          <option value="auto">Auto</option>
+          <option value="manual">Manual</option>
+        </select>
+      </div>
+
+      <div class="input-section">
+        <div class="input-item">
+          <label for="manufacture_year">Manufacture Year</label>
+          <input
+            type="number"
+            min="1900"
+            max="2099"
+            placeholder="YYYY"
+            id="manufacture_year"
+            [(ngModel)]="formData.manufacture_year"
+            name="manufacture_year"
+          />
+        </div>
+      </div>
+
+      <div class="btn-wrapper">
+        <button type="submit">Save</button>
+        <button type="button" (click)="onClose()">Close</button>
+      </div>
+    </form>
+  </div>
+</div>
