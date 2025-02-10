@@ -1,18 +1,14 @@
 <div class="page home">
-  <div>
+  <!-- <div>
     <app-search></app-search>
-  </div>
+  </div> -->
 
   <div class="listings">
     <app-listing-header></app-listing-header>
     <div>
-      <app-listing-item></app-listing-item>
-      <app-listing-item></app-listing-item>
-      <app-listing-item></app-listing-item>
-      <app-listing-item></app-listing-item>
-      <app-listing-item></app-listing-item>
-      <app-listing-item></app-listing-item>
-      <app-listing-item></app-listing-item>
+      @for (car of cars; track $index) {
+      <app-listing-item [carDetail]="car"></app-listing-item>
+      }
     </div>
   </div>
 </div>

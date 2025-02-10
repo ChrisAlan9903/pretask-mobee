@@ -1,0 +1,29 @@
+.info-table {
+  width: 50%;
+  max-width: 400px; // Adjust as needed
+  border-collapse: collapse; // Remove spacing between cells
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+
+  tr {
+    border-bottom: 1px solid #ddd; // Add a border between rows
+
+    &:last-child {
+      border-bottom: none; // Remove border for the last row
+    }
+  }
+
+  td {
+    padding: 12px 15px; // Add padding to cells
+
+    &.title {
+      font-weight: bold; // Make titles bold
+      color: #333; // Darker color for titles
+      width: 40%; // Adjust width of the title column
+    }
+
+    &.data {
+      color: #555; // Lighter color for data
+    }
+  }
+}

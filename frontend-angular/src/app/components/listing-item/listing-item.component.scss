@@ -4,10 +4,17 @@
   border-bottom: 1px solid #2c2c2c;
   padding: 10px;
   align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    background: lightblue;
+  }
 }
 
 .list-item {
   flex: 1;
+  display: flex;
+  justify-content: space-between;
 
   &.half {
     flex: 0.5;

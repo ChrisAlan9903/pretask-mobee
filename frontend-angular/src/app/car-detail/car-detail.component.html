@@ -1,4 +1,29 @@
-<p>CAr detail page: {{ carId }}</p>
+<p>Car detail page: {{ carId }}</p>
+
+<div>
+  <table class="info-table">
+    <tr>
+      <td class="title">Brand</td>
+      <td class="data">{{ carDetail.brand }}</td>
+    </tr>
+    <tr>
+      <td class="title">Model</td>
+      <td class="data">{{ carDetail.model }}</td>
+    </tr>
+    <tr>
+      <td class="title">Variant</td>
+      <td class="data">{{ carDetail.variant }}</td>
+    </tr>
+    <tr>
+      <td class="title">Transmission</td>
+      <td class="data">{{ carDetail.transmission }}</td>
+    </tr>
+    <tr>
+      <td class="title">Manufacture Year</td>
+      <td class="data">{{ carDetail.manufacture_year }}</td>
+    </tr>
+  </table>
+</div>
 @if (carId) {
 <qr-code [value]="carId" size="300" errorCorrectionLevel="M"></qr-code>
 }
