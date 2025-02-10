@@ -17,11 +17,13 @@
 
 <p>Car detail page: {{ carId }}</p>
 
-<div>
+<div class="btn-container">
   <button type="button" (click)="toggleEditForm(true)">
     Update Car Detail
   </button>
-  <button type="button" (click)="toggleDeleteDialog(true)">Delete Car</button>
+  <button class="delete-btn" type="button" (click)="toggleDeleteDialog(true)">
+    Delete Car
+  </button>
 </div>
 
 <div>

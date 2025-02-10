@@ -27,3 +27,23 @@
     }
   }
 }
+
+.btn-container {
+  display: flex;
+  gap: 20px;
+
+  button {
+    cursor: pointer;
+  }
+
+  .delete-btn {
+    background: white;
+    color: red;
+    border: 2px solid red;
+
+    &:hover {
+      background: red;
+      color: white;
+    }
+  }
+}
